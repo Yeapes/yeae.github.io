@@ -43,7 +43,7 @@
     }
 	
     const CONFIG_LEACLOUD_COUNT = {
-      enable: false,
+      enable: true,
 	  appId: 'AU8...',
 	  appKey: '4cU...',
 	  serverURLs: 'http' || ' '
@@ -307,6 +307,21 @@
 	<!-- busuanzi -->
 	<!-- busuanzi -->
 
+		
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+
+		<span id="busuanzi_container_site_pv">
+	    	本站总访问量<span id="busuanzi_value_site_pv"></span>次
+		</span>
+
+		<span id="busuanzi_container_site_uv">
+	  		本站访客数<span id="busuanzi_value_site_uv"></span>人次
+		</span>
+		
+	
+
+
 
 
 			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
@@ -383,6 +398,11 @@
 -->
 
 
+  
+<script src="/plugin/leancloud/av-min.js"></script>
+<script src="/js/leancloud-count.js"></script>
+
+
 	
 
   
@@ -410,6 +430,21 @@
 		<div class="local-search-footer">
 			<div class="topN-post">				
 				
+
+   
+	<div id="topN">
+		<div class="topN-title" data-title= "Popular post"></div> 
+	</div>
+	
+    <script>
+        var limitCount = 10;
+        if( $('#topN').length ){
+            setTimeout(function() {
+                topNPost(limitCount);
+			}, 3000);
+        }
+    </script>
+   
 								
 			</div>
 		</div>
