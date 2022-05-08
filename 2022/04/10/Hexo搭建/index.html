@@ -155,6 +155,10 @@
 	
 
 	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">Search</a>
+		</li>
+	
 </ul>
 	</div>
 	
@@ -299,7 +303,7 @@
 </ul>
 <h3 id="4-创建Github仓库"><a href="#4-创建Github仓库" class="headerlink" title="4.创建Github仓库"></a>4.创建Github仓库</h3><ul>
 <li>user.github.io  </li>
-<li>配置SSH<br> 1.在C:\Users\用户名 文件夹下右键打开Git Bash Here输入命令：ssh-keygen -t rsa -C 邮件地址<br> 2.三次回车<br> 3.   .ssh文件内复制公钥内容添加至Github SSH and GPG keys<br> 4.验证:  ssh -T <a href="mailto:&#103;&#105;&#116;&#64;&#103;&#105;&#116;&#104;&#117;&#x62;&#46;&#x63;&#111;&#109;">&#103;&#105;&#116;&#64;&#103;&#105;&#116;&#104;&#117;&#x62;&#46;&#x63;&#111;&#109;</a>  （不用改动）<br> 5. git config –global user.name “用户名”<br>     git config –global user.email “注册邮箱”</li>
+<li>配置SSH<br> 1.在C:\Users\用户名 文件夹下右键打开Git Bash Here输入命令：ssh-keygen -t rsa -C 邮件地址<br> 2.三次回车<br> 3.   .ssh文件内复制公钥内容添加至Github SSH and GPG keys<br> 4.验证:  ssh -T <a href="mailto:&#103;&#x69;&#116;&#64;&#103;&#105;&#x74;&#104;&#117;&#x62;&#46;&#99;&#111;&#x6d;">&#103;&#x69;&#116;&#64;&#103;&#105;&#x74;&#104;&#117;&#x62;&#46;&#99;&#111;&#x6d;</a>  （不用改动）<br> 5. git config –global user.name “用户名”<br>     git config –global user.email “注册邮箱”</li>
 </ul>
 <h3 id="5-使用-hexo-搭建博客"><a href="#5-使用-hexo-搭建博客" class="headerlink" title="5.使用 hexo 搭建博客"></a>5.使用 hexo 搭建博客</h3><ul>
 <li>创建文件夹放置博客内容，此文件夹内右键 Git Bash Here  </li>
@@ -436,7 +440,7 @@ git commit -m “自定义”  &#x2F;&#x2F;sta...
 							<p class="relate-post-content">
 								安装问题安装包
 失效联系_yeae
-&#x72;&#x61;&#x6f;&#114;&#x61;&#111;&#x66;&#101;&#110;&#x67;&#x40;&#x71;&#x71;&#46;&#99;&#111;&#x6d...
+&#114;&#x61;&#111;&#x72;&#97;&#x6f;&#x66;&#x65;&#110;&#x67;&#64;&#113;&#113;&#x2e;&#x63;&#x6f;&#x6d...
 							</p>
 						</div>
 
@@ -701,6 +705,10 @@ git commit -m “自定义”  &#x2F;&#x2F;sta...
 	
 
 	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">Search</a>
+		</li>
+	
 </ul>
 	</div>
 
@@ -798,6 +806,56 @@ git commit -m “自定义”  &#x2F;&#x2F;sta...
 	
 
   
+
+	<!--
+	时间：2018-10-3
+	描述：
+		插件名称：hexo-generator-search-zip
+		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
+		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
+-->
+<div class="popup search-popup local-search-popup scrollbar" >
+	<div class="local-search-container">
+		<span class="popup-btn-close">
+      		ESC
+   		</span>
+		<div class="local-search-header">
+			<div class="input-prompt">				
+			</div>
+			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+		</div>
+		<div class="local-search-body">
+			<div id="local-search-output"></div>
+		</div>
+		<div class="local-search-footer">
+			<div class="topN-post">				
+				
+								
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="/plugin/search/ziploader.js"></script>
+<script src="/js/search.js"></script>
+
+
+<script type="text/javascript">
+	var search_path = 'search.xml',
+		zip_Path = '/',
+		version_Path = '/',
+		input_Trigger = 'auto',
+		top_N = '2';
+
+	themeLocalSearch({
+		search_path, 
+		zip_Path, 
+		version_Path, 
+		input_Trigger, 
+		top_N
+	});
+</script>
 
 
 

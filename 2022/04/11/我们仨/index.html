@@ -155,6 +155,10 @@
 	
 
 	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">Search</a>
+		</li>
+	
 </ul>
 	</div>
 	
@@ -402,7 +406,7 @@ git commit -m “自定义”  &#x2F;&#x2F;sta...
 							<p class="relate-post-content">
 								安装问题安装包
 失效联系_yeae
-&#x72;&#x61;&#x6f;&#114;&#x61;&#111;&#x66;&#101;&#110;&#x67;&#x40;&#x71;&#x71;&#46;&#99;&#111;&#x6d...
+&#114;&#x61;&#111;&#x72;&#97;&#x6f;&#x66;&#x65;&#110;&#x67;&#64;&#113;&#113;&#x2e;&#x63;&#x6f;&#x6d...
 							</p>
 						</div>
 
@@ -677,6 +681,10 @@ Github
 	
 
 	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">Search</a>
+		</li>
+	
 </ul>
 	</div>
 
@@ -774,6 +782,56 @@ Github
 	
 
   
+
+	<!--
+	时间：2018-10-3
+	描述：
+		插件名称：hexo-generator-search-zip
+		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
+		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
+-->
+<div class="popup search-popup local-search-popup scrollbar" >
+	<div class="local-search-container">
+		<span class="popup-btn-close">
+      		ESC
+   		</span>
+		<div class="local-search-header">
+			<div class="input-prompt">				
+			</div>
+			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+		</div>
+		<div class="local-search-body">
+			<div id="local-search-output"></div>
+		</div>
+		<div class="local-search-footer">
+			<div class="topN-post">				
+				
+								
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="/plugin/search/ziploader.js"></script>
+<script src="/js/search.js"></script>
+
+
+<script type="text/javascript">
+	var search_path = 'search.xml',
+		zip_Path = '/',
+		version_Path = '/',
+		input_Trigger = 'auto',
+		top_N = '2';
+
+	themeLocalSearch({
+		search_path, 
+		zip_Path, 
+		version_Path, 
+		input_Trigger, 
+		top_N
+	});
+</script>
 
 
 
